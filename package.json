@@ -1,5 +1,5 @@
 {
-  "name": "express-workshop",
+  "name": "HR-Express-API.git",
   "version": "1.0.0",
   "description": "An API REST using express.js",
   "main": "index.js",
@@ -9,21 +9,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KimRuedasR/express-workshop.git"
+    "url": "git+https://github.com/KimRuedasR/HR-Express-API.git"
   },
   "keywords": [
     "nodejs",
     "express",
     "rest",
     "api",
-    "mysql"
+    "mysql",
+    "hr",
+    "database"
   ],
   "author": "KimRR",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/KimRuedasR/express-workshop.git/issues"
+    "url": "https://github.com/KimRuedasR/HR-Express-API.git/issues"
   },
-  "homepage": "https://github.com/KimRuedasR/express-workshop#readme",
+  "homepage": "https://github.com/KimRuedasR/HR-Express-API.git#readme",
   "dependencies": {
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.2",
