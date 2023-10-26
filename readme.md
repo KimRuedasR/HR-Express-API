@@ -36,10 +36,25 @@ Una API REST de gestión de recursos humanos que utiliza node.js y express.js. G
 2. **Install**:
    npm install
 3. **MySQL Setup**:
-   - New User: CREATE USER 'hrmanagement'@'localhost' IDENTIFIED BY 'hrmanagement';
-   - Grant: GRANT ALL PRIVILEGES ON hrmanagement.\* TO 'hrmanagement'@'localhost';
-   - Flush: FLUSH PRIVILEGES;
+   - New User: 
+   Create new user "hrmanagement".
+   ```bash
+   CREATE USER 'hrmanagement'@'localhost' IDENTIFIED BY 'hrmanagement';
+   ```
+   - Test database
+   Import "./hrmanagement.sql" for a test database
+ 
+   - Grant: 
+   Grant all privileges to the "hrmanagement" user and the "hrmanagement.sql" datadase. 
+   ```bash
+   GRANT ALL PRIVILEGES ON hrmanagement.\* TO 'hrmanagement'@'localhost';
+   ```
+   - Flush: 
+   ```bash
+   FLUSH PRIVILEGES;
+   ```
 4. **DB Config**:
+
    - Update config/database.js.
 5. **Start**:
    npm start
