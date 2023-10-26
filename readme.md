@@ -1,3 +1,5 @@
+# HR Management API (API de RH)
+
 --------------------------------------------------------------
 |                                                            |
 |               Taller de Node.js S.A. de C.V.               |
@@ -16,11 +18,10 @@
 |                                                            |
 --------------------------------------------------------------
 
-# HR Management API (API de RH)
-
 ## Description (Descripción)
 
-API for HR Management. Manages administrators and employees.s
+An HR management REST API using node.js and express.js. Manages administrators and employees.
+Una API REST de gestión de recursos humanos que utiliza node.js y express.js. Gestiona administradores y empleados.
 
 ## Requirements (Requisitos)
 
