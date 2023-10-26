@@ -18,7 +18,7 @@ function init() {
 
 function loadEmployees() {
   axios
-    .get(url + "/employeeRoutes", headers)
+    .get(url + "/employees", headers)
     .then(function (res) {
       console.log(res);
       displayEmployees(res.data.message);

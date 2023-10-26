@@ -21,7 +21,7 @@ function signin() {
 
   axios({
     method: "post",
-    url: "http://localhost:3000/user/signin",
+    url: "http://localhost:3000/admin/signin",
     data: {
       admin_nombre: name,
       admin_correo: mail,
@@ -29,7 +29,7 @@ function signin() {
     },
   })
     .then(function (res) {
-      console.log(res);
+      sconsole.log(res);
       alert("Registro exitoso");
       window.location.href = "login.html";
     })
