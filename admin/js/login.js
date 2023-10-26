@@ -22,8 +22,8 @@ function login() {
     method: "post",
     url: "http://localhost:3000/user/login",
     data: {
-      admin_mail: mail,
-      admin_password: pass,
+      admin_correo: mail,
+      admin_contrasena: pass,
     },
   })
     .then(function (res) {
