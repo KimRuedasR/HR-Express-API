@@ -2,7 +2,7 @@
 --------------------------------------------------------------
 |                                                            |
 |               Taller de Node.js S.A. de C.V.               |
-|                           v1.1.1                           |
+|                           v1.1.2                           |
 |                                                            |
 |                  HHHH H   HHHH HH   RRRRRRR R              |
 |                  HHHH H   HHHH HH   RRRRRRR RR             |
@@ -17,16 +17,18 @@
 |                                                            |
 --------------------------------------------------------------
 ```
+
 # HR Management API (API de RH)
 
 ## Description (Descripción)
 
 An HR management REST API using node.js and express.js. Manages administrators and employees.
+
 Una API REST de gestión de recursos humanos que utiliza node.js y express.js. Gestiona administradores y empleados.
 
 ## Requirements (Requisitos)
 
-- Node.js
+- Node.jss
 - MySQL
 
 ## Setup (Configuración)
@@ -36,28 +38,48 @@ Una API REST de gestión de recursos humanos que utiliza node.js y express.js. G
 2. **Install**:
    npm install
 3. **MySQL Setup**:
-   - New User: 
-   Create new user "hrmanagement".
+
+   - New User:
+     Create new user "hrmanagement".
+
+   SQl Query:
+
    ```bash
    CREATE USER 'hrmanagement'@'localhost' IDENTIFIED BY 'hrmanagement';
    ```
+
    - Test database
-   Import "./hrmanagement.sql" for a test database
- 
-   - Grant: 
-   Grant all privileges to the "hrmanagement" user and the "hrmanagement.sql" datadase. 
+     Import "./hrmanagement.sql" for a test database
+
+   - Grant:
+     Grant all privileges to the "hrmanagement" user and the "hrmanagement.sql" datadase.
+
+   SQl Query:
+
    ```bash
    GRANT ALL PRIVILEGES ON hrmanagement.\* TO 'hrmanagement'@'localhost';
    ```
-   - Flush: 
+
+   - Flush:
+     Flush privileges.
+
+   SQl Query:
+
    ```bash
    FLUSH PRIVILEGES;
    ```
+
 4. **DB Config**:
 
-   - Update config/database.js.
+   - By default configured for "hrmanagement.sql" test database.
+
+   - Update ./config/database.js.
+
 5. **Start**:
    npm start
+
+6. **Test**:
+   Import ./Postman_hrManagement.postman_collection.json with Postman to test the CRUD operations for "Administradores" and "Empleados" entities.
 
 ## Endpoints
 
