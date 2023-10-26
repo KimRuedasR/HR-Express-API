@@ -1,45 +1,59 @@
-# HR Management API
+--------------------------------------------------------------
+|                                                            |
+|               Taller de Node.js S.A. de C.V.               |
+|                           v1.1.0                           |
+|                                                            |
+|                  HHHH H   HHHH HH   RRRRRRR R              |
+|                  HHHH H   HHHH HH   RRRRRRR RR             |
+|                  HHHH H   HHHH HH   RRR   RR RR            |
+|                  HHHH H   HHHH HH   RRR    RR RR           |
+|                  HHHHHHHHHHHHH HH   RRR   RR RR            |
+|                  HHHHHHHHHHHHH HH   RRRRRRR RR             |
+|                  HHHH H   HHHH HH   RRRRR RR               |
+|                  HHHH H   HHHH HH   RRR RR RR              |
+|                  HHHH H   HHHH HH   RRR  RR RR             |
+|                  HHHH H   HHHH HH   RRR   RR RR            |
+|                                                            |
+--------------------------------------------------------------
 
-## Description
+# HR Management API (API de RH)
 
-This project is an API for Human Resources Management. It allows administrators to manage employees and access their details.
+## Description (Descripción)
 
-## Requirements
+API for HR Management. Manages administrators and employees.s
+
+## Requirements (Requisitos)
 
 - Node.js
 - MySQL
 
-## Setup
+## Setup (Configuración)
 
-1. **Clone this repository**:
-   ```
+1. **Clone Repo**:
    git clone https://github.com/KimRuedasR/HR-Express-API.git
-   ```
-2. **Install Dependencies**:
-   ```
+2. **Install**:
    npm install
-   ```
-3. **Setup MySQL Database**:
-
-   - Create a new MySQL user: `CREATE USER 'hrmanagement'@'localhost' IDENTIFIED BY 'hrmanagement';`
-   - Grant privileges: `GRANT ALL PRIVILEGES ON hrmanagement.* TO 'newuser'@'localhost';`
-   - Flush privileges: `FLUSH PRIVILEGES;`
-
-4. **Update Database Configuration**:
-
-   - Open `config/database.js` and update the MySQL username and password.
-
-5. **Start the Server**:
-   ```
+3. **MySQL Setup**:
+   - New User: CREATE USER 'hrmanagement'@'localhost' IDENTIFIED BY 'hrmanagement';
+   - Grant: GRANT ALL PRIVILEGES ON hrmanagement.\* TO 'hrmanagement'@'localhost';
+   - Flush: FLUSH PRIVILEGES;
+4. **DB Config**:
+   - Update config/database.js.
+5. **Start**:
    npm start
-   ```
 
 ## Endpoints
 
-- `/signin`: Register a new administrator.
-- `/login`: Login as an administrator.
-- `/`: Get all administrators.
+### Admin Routes
 
-## License
+- /signin: New admin.
+- /login: Admin login.
+- /: All admins.
 
-MIT
+### Employee Routes
+
+- /employees: All employees.
+- /employees/:id: Employee by ID.
+- /employees: Create new employee (POST).
+- /employees/:id: Update employee (PUT).
+- /employees/:id: Delete employee (DELETE).

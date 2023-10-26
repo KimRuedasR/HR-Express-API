@@ -1,7 +1,7 @@
 {
-  "name": "HR-Express-API.git",
-  "version": "1.0.0",
-  "description": "An API REST using express.js",
+  "name": "HR-Express-API",
+  "version": "1.1.0",
+  "description": "An HR management REST API using node.js and express.js",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index",
