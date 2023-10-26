@@ -20,7 +20,7 @@ function login() {
 
   axios({
     method: "post",
-    url: "http://localhost:3000/user/login",
+    url: "http://localhost:3000/admins/login",
     data: {
       admin_correo: mail,
       admin_contrasena: pass,
@@ -29,7 +29,7 @@ function login() {
     .then(function (res) {
       if (res.data.code === 200) {
         localStorage.setItem("token", res.data.message);
-        window.location.href = "pokedex.html";
+        window.location.href = "empleados.html";
       } else {
         alert("Usuario y/o contraseña incorrectos");
       }
