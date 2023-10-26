@@ -4,7 +4,7 @@ const morgan = require("morgan");
 const app = express();
 // Routes
 const employeeRoutes = require("./routes/employeeRoutes.js");
-const admin = require("./routes/admin.js");
+const adminRoutes = require("./routes/adminRoutes.js");
 // Middleware
 const auth = require("./middleware/auth");
 const notFound = require("./middleware/notFound");
@@ -18,11 +18,11 @@ app.use(cors);
 
 app.get("/", index);
 
-app.use("/admin", admin);
+app.use("/admins", adminRoutes);
 
 app.use(auth);
 
-app.use("/employeeRoutes", employeeRoutes);
+app.use("/employees", employeeRoutes);
 
 app.use(notFound);
 
@@ -31,4 +31,3 @@ app.listen(process.env.PORT || 3000, () => {
   console.log("----::Servidor RH iniciado::----");
   console.log("--------------------------------");
 });
-//

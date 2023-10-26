@@ -1,9 +1,10 @@
 const express = require("express");
 const jwt = require("jsonwebtoken");
-const user = express.Router();
+const admin = express.Router();
 const db = require("../config/database");
 
-user.post("/signin", async (req, res, next) => {
+admin.post("/signin", async (req, res, next) => {
+  console.log(req.body);
   const { admin_nombre, admin_correo, admin_contrasena } = req.body;
   let query =
     "INSERT INTO administradores (admin_nombre, admin_correo, admin_contrasena) ";
@@ -21,7 +22,7 @@ user.post("/signin", async (req, res, next) => {
   return res.status(500).json({ code: 500, message: "Campos incompletos" });
 });
 
-user.post("/login", async (req, res, next) => {
+admin.post("/login", async (req, res, next) => {
   const { admin_correo, admin_contrasena } = req.body;
   const query = `SELECT * FROM administradores WHERE admin_correo='${admin_correo}' AND admin_contrasena='${admin_contrasena}';`;
   const rows = await db.query(query);
@@ -44,11 +45,11 @@ user.post("/login", async (req, res, next) => {
   return res.status(500).json({ code: 500, message: "Campos incompletos" });
 });
 
-user.get("/", async (req, res, next) => {
+admin.get("/", async (req, res, next) => {
   const query = "SELECT * FROM administradores";
   const rows = await db.query(query);
 
   return res.status(200).json({ code: 200, message: rows });
 });
 
-module.exports = user;
+module.exports = admin;

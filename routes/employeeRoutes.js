@@ -1,8 +1,8 @@
 const express = require("express");
-const employeeRoutes = express.Router();
+const employees = express.Router();
 const db = require("../config/database");
 
-employeeRoutes.post("/", async (req, res, next) => {
+employees.post("/", async (req, res, next) => {
   const { emp_nombre, emp_apellidos, emp_telefono, emp_correo, emp_direccion } =
     req.body;
 
@@ -29,7 +29,7 @@ employeeRoutes.post("/", async (req, res, next) => {
   return res.status(500).json({ code: 500, message: "Campos incompletos" });
 });
 
-employeeRoutes.delete("/:id([0-9]{1,11})", async (req, res, next) => {
+employees.delete("/:id([0-9]{1,11})", async (req, res, next) => {
   const query = `DELETE FROM empleados WHERE emp_id=${req.params.id};`;
   const rows = await db.query(query);
   if (rows.affectedRows == 1) {
@@ -40,7 +40,7 @@ employeeRoutes.delete("/:id([0-9]{1,11})", async (req, res, next) => {
   return res.status(404).json({ code: 404, message: "Empleado no encontrado" });
 });
 
-employeeRoutes.put("/:id([0-9]{1,11})", async (req, res, next) => {
+employees.put("/:id([0-9]{1,11})", async (req, res, next) => {
   const { emp_nombre, emp_apellidos, emp_telefono, emp_correo, emp_direccion } =
     req.body;
 
@@ -67,12 +67,12 @@ employeeRoutes.put("/:id([0-9]{1,11})", async (req, res, next) => {
   return res.status(500).json({ code: 500, message: "Campos incompletos" });
 });
 
-employeeRoutes.get("/", async (req, res, next) => {
+employees.get("/", async (req, res, next) => {
   const emp = await db.query("SELECT * FROM empleados");
   return res.status(200).json({ code: 200, message: emp });
 });
 
-employeeRoutes.get("/:id([0-9]{1,11})", async (req, res, next) => {
+employees.get("/:id([0-9]{1,11})", async (req, res, next) => {
   const id = req.params.id;
   const emp = await db.query(`SELECT * FROM empleados WHERE emp_id=${id};`);
   if (emp.length > 0) {
@@ -81,4 +81,4 @@ employeeRoutes.get("/:id([0-9]{1,11})", async (req, res, next) => {
   return res.status(404).send({ code: 404, message: "Empleado no encontrado" });
 });
 
-module.exports = employeeRoutes;
+module.exports = employees;
