@@ -23,7 +23,7 @@ function signin() {
     method: "post",
     url: "http://localhost:3000/user/signin",
     data: {
-      user_name: name,
+      admin_nombre: name,
       admin_correo: mail,
       dmin_contrasena: pass,
     },
