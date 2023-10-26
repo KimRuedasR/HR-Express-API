@@ -1,0 +1,271 @@
+{
+	"info": {
+	  "_postman_id": "64a28f7a-edc1-4bb9-a3f7-754fc1460215",
+	  "name": "HR-Express-API",
+	  "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+	  "_exporter_id": "27356596"
+	},
+	"item": [
+	  {
+		"name": "Create Employee",
+		"request": {
+		  "method": "POST",
+		  "header": [
+			{
+			  "key": "Authorization",
+			  "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6MSwiYWRtaW5fY29ycmVvIjoiYWRtaW4iLCJpYXQiOjE2OTgyODM0MDZ9.oLsmDoVHXMB7S0lR4fFhzD8s_ra1XJuKixp_GOjXSLA",
+			  "type": "text"
+			},
+			{
+			  "key": "Content-Type",
+			  "value": "application/json",
+			  "type": "text"
+			}
+		  ],
+		  "body": {
+			"mode": "raw",
+			"raw": "{\n  \"emp_nombre\": \"Juan\",\n  \"emp_apellidos\": \"Perez\",\n  \"emp_telefono\": \"1234567890\",\n  \"emp_correo\": \"juan@email.com\",\n  \"emp_direccion\": \"Av. Siempreviva\"\n}",
+			"options": {
+			  "raw": {
+				"language": "json"
+			  }
+			}
+		  },
+		  "url": {
+			"raw": "localhost:3000/employees",
+			"host": [
+			  "localhost"
+			],
+			"port": "3000",
+			"path": [
+			  "employees"
+			]
+		  }
+		},
+		"response": []
+	  },
+	  {
+		"name": "Get All Employees",
+		"protocolProfileBehavior": {
+		  "disableBodyPruning": true
+		},
+		"request": {
+		  "method": "GET",
+		  "header": [
+			{
+			  "key": "Authorization",
+			  "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6MSwiYWRtaW5fY29ycmVvIjoiYWRtaW4iLCJpYXQiOjE2OTgyODM0MDZ9.oLsmDoVHXMB7S0lR4fFhzD8s_ra1XJuKixp_GOjXSLA",
+			  "type": "text"
+			}
+		  ],
+		  "body": {
+			"mode": "raw",
+			"raw": ""
+		  },
+		  "url": {
+			"raw": "localhost:3000/employees",
+			"host": [
+			  "localhost"
+			],
+			"port": "3000",
+			"path": [
+			  "employees"
+			]
+		  }
+		},
+		"response": []
+	  },
+	  {
+		"name": "Get Employee by ID",
+		"request": {
+		  "method": "GET",
+		  "header": [
+			{
+			  "key": "Authorization",
+			  "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6MSwiYWRtaW5fY29ycmVvIjoiYWRtaW4iLCJpYXQiOjE2OTgyODM0MDZ9.oLsmDoVHXMB7S0lR4fFhzD8s_ra1XJuKixp_GOjXSLA",
+			  "type": "text"
+			}
+		  ],
+		  "url": {
+			"raw": "localhost:3000/employees/1",
+			"host": [
+			  "localhost"
+			],
+			"port": "3000",
+			"path": [
+			  "employees",
+			  "1"
+			]
+		  }
+		},
+		"response": []
+	  },
+	  {
+		"name": "Update Employee",
+		"request": {
+		  "method": "PUT",
+		  "header": [
+			{
+			  "key": "Authorization",
+			  "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6MSwiYWRtaW5fY29ycmVvIjoiYWRtaW4iLCJpYXQiOjE2OTgyODM0MDZ9.oLsmDoVHXMB7S0lR4fFhzD8s_ra1XJuKixp_GOjXSLA",
+			  "type": "text"
+			},
+			{
+			  "key": "Content-Type",
+			  "value": "application/json",
+			  "type": "text"
+			}
+		  ],
+		  "body": {
+			"mode": "raw",
+			"raw": "{\n  \"emp_nombre\": \"Juan\",\n  \"emp_apellidos\": \"Perez\",\n  \"emp_telefono\": \"0987654321\",\n  \"emp_correo\": \"juan@email.com\",\n  \"emp_direccion\": \"Av. Siempreviva\"\n}",
+			"options": {
+			  "raw": {
+				"language": "json"
+			  }
+			}
+		  },
+		  "url": {
+			"raw": "localhost:3000/employees/1",
+			"host": [
+			  "localhost"
+			],
+			"port": "3000",
+			"path": [
+			  "employees",
+			  "1"
+			]
+		  }
+		},
+		"response": []
+	  },
+	  {
+		"name": "Delete Employee",
+		"request": {
+		  "method": "DELETE",
+		  "header": [
+			{
+			  "key": "Authorization",
+			  "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6MSwiYWRtaW5fY29ycmVvIjoiYWRtaW4iLCJpYXQiOjE2OTgyODM0MDZ9.oLsmDoVHXMB7S0lR4fFhzD8s_ra1XJuKixp_GOjXSLA",
+			  "type": "text"
+			}
+		  ],
+		  "url": {
+			"raw": "localhost:3000/employees/1",
+			"host": [
+			  "localhost"
+			],
+			"port": "3000",
+			"path": [
+			  "employees",
+			  "1"
+			]
+		  }
+		},
+		"response": []
+	  },
+	  {
+		"name": "Create Administrator",
+		"request": {
+		  "method": "POST",
+		  "header": [
+			{
+			  "key": "Authorization",
+			  "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6MSwiYWRtaW5fY29ycmVvIjoiYWRtaW4iLCJpYXQiOjE2OTgyODM0MDZ9.oLsmDoVHXMB7S0lR4fFhzD8s_ra1XJuKixp_GOjXSLA",
+			  "type": "text"
+			},
+			{
+			  "key": "Content-Type",
+			  "value": "application/json",
+			  "type": "text"
+			}
+		  ],
+		  "body": {
+			"mode": "raw",
+			"raw": "{\n  \"admin_nombre\": \"admin2\",\n  \"admin_correo\": \"admin2@email.com\",\n  \"admin_contrasena\": \"1234\"\n}",
+			"options": {
+			  "raw": {
+				"language": "json"
+			  }
+			}
+		  },
+		  "url": {
+			"raw": "localhost:3000/admins/signin",
+			"host": [
+			  "localhost"
+			],
+			"port": "3000",
+			"path": [
+			  "admins",
+			  "signin"
+			]
+		  }
+		},
+		"response": []
+	  },
+	  {
+		"name": "Administrator Login",
+		"request": {
+		  "method": "POST",
+		  "header": [
+			{
+			  "key": "Authorization",
+			  "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6MSwiYWRtaW5fY29ycmVvIjoiYWRtaW4iLCJpYXQiOjE2OTgyODM0MDZ9.oLsmDoVHXMB7S0lR4fFhzD8s_ra1XJuKixp_GOjXSLA",
+			  "type": "text"
+			},
+			{
+			  "key": "Content-Type",
+			  "value": "application/json",
+			  "type": "text"
+			}
+		  ],
+		  "body": {
+			"mode": "raw",
+			"raw": "{\n  \"admin_correo\": \"admin\",\n  \"admin_contrasena\": \"1234\"\n}",
+			"options": {
+			  "raw": {
+				"language": "json"
+			  }
+			}
+		  },
+		  "url": {
+			"raw": "localhost:3000/admins/login",
+			"host": [
+			  "localhost"
+			],
+			"port": "3000",
+			"path": [
+			  "admins",
+			  "login"
+			]
+		  }
+		},
+		"response": []
+	  },
+	  {
+		"name": "Get All Administrators",
+		"request": {
+		  "method": "GET",
+		  "header": [
+			{
+			  "key": "Authorization",
+			  "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6MSwiYWRtaW5fY29ycmVvIjoiYWRtaW4iLCJpYXQiOjE2OTgyODM0MDZ9.oLsmDoVHXMB7S0lR4fFhzD8s_ra1XJuKixp_GOjXSLA",
+			  "type": "text"
+			}
+		  ],
+		  "url": {
+			"raw": "localhost:3000/admins",
+			"host": [
+			  "localhost"
+			],
+			"port": "3000",
+			"path": [
+			  "admins"
+			]
+		  }
+		},
+		"response": []
+	  }
+	]
+  }
+  
