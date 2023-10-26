@@ -10,7 +10,7 @@ function init() {
 
     document.querySelector(".btn-primary").addEventListener("click", login);
   } else {
-    window.location.href = "pokedex.html";
+    window.location.href = "empleados.html";
   }
 }
 
@@ -22,19 +22,20 @@ function login() {
     method: "post",
     url: "http://localhost:3000/user/login",
     data: {
-      user_mail: mail,
-      user_password: pass,
+      admin_correo: mail,
+      admin_contrasena: pass,
     },
   })
     .then(function (res) {
       if (res.data.code === 200) {
         localStorage.setItem("token", res.data.message);
-        window.location.href = "pokedex.html";
+        window.location.href = "empleados.html";
       } else {
         alert("Usuario y/o contraseña incorrectos");
       }
     })
     .catch(function (err) {
-      console.log(err);
+      console.log("Ocurrio un error:", err);
+      alert("Ocurrio un error, por favor revisa la consola por los detalles.");
     });
 }

@@ -4,16 +4,17 @@ const user = express.Router();
 const db = require("../config/database");
 
 user.post("/signin", async (req, res, next) => {
-  const { user_name, user_mail, user_password } = req.body;
-  let query = "INSERT INTO user (user_name, user_mail, user_password) ";
-  query += `VALUES('${user_name}', '${user_mail}', '${user_password}');`;
+  const { admin_nombre, admin_correo, admin_contrasena } = req.body;
+  let query =
+    "INSERT INTO administradores (admin_nombre, admin_correo, admin_contrasena) ";
+  query += `VALUES('${admin_nombre}', '${admin_correo}', '${admin_contrasena}');`;
 
   const rows = await db.query(query);
-  if (user_name && user_mail && user_password) {
+  if (admin_nombre && admin_correo && admin_contrasena) {
     if (rows.affectedRows == 1) {
       return res
         .status(201)
-        .json({ code: 201, message: "Usuario registrado correctamente" });
+        .json({ code: 201, message: "Administrador registrado correctamente" });
     }
     return res.status(500).json({ code: 500, message: "Ocurrió un error" });
   }
@@ -21,15 +22,15 @@ user.post("/signin", async (req, res, next) => {
 });
 
 user.post("/login", async (req, res, next) => {
-  const { user_mail, user_password } = req.body;
-  const query = `SELECT * FROM user WHERE user_mail='${user_mail}' AND user_password='${user_password}';`;
+  const { admin_correo, admin_contrasena } = req.body;
+  const query = `SELECT * FROM administradores WHERE admin_correo='${admin_correo}' AND admin_contrasena='${admin_contrasena}';`;
   const rows = await db.query(query);
-  if (user_mail && user_password) {
+  if (admin_correo && admin_contrasena) {
     if (rows.length == 1) {
       const token = jwt.sign(
         {
-          user_id: rows[0].user_id,
-          user_mail: rows[0].user_mail,
+          admin_id: rows[0].admin_id,
+          admin_correo: rows[0].admin_correo,
         },
         "debugkey"
       );
@@ -44,11 +45,10 @@ user.post("/login", async (req, res, next) => {
 });
 
 user.get("/", async (req, res, next) => {
-  const query = "SELECT * FROM user";
+  const query = "SELECT * FROM administradores";
   const rows = await db.query(query);
 
   return res.status(200).json({ code: 200, message: rows });
 });
 
 module.exports = user;
-//

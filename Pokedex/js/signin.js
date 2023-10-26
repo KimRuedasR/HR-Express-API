@@ -10,7 +10,7 @@ function init() {
 
     document.querySelector(".btn-primary").addEventListener("click", signin);
   } else {
-    window.location.href = "pokedex.html";
+    window.location.href = "empleados.html";
   }
 }
 
@@ -24,8 +24,8 @@ function signin() {
     url: "http://localhost:3000/user/signin",
     data: {
       user_name: name,
-      user_mail: mail,
-      user_password: pass,
+      admin_correo: mail,
+      dmin_contrasena: pass,
     },
   })
     .then(function (res) {

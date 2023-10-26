@@ -3,7 +3,7 @@ const express = require("express");
 const morgan = require("morgan");
 const app = express();
 // Routes
-const pokemon = require("./routes/pokemon.js");
+const employeeRoutes = require("./routes/employeeRoutes.js");
 const user = require("./routes/user.js");
 // Middleware
 const auth = require("./middleware/auth");
@@ -22,7 +22,7 @@ app.use("/user", user);
 
 app.use(auth);
 
-app.use("/pokemon", pokemon);
+app.use("/employeeRoutes", employeeRoutes);
 
 app.use(notFound);
 

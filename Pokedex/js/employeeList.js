@@ -10,27 +10,27 @@ function init() {
         Authorization: "bearer " + localStorage.getItem("token"),
       },
     };
-    loadPokemon();
+    loadEmployees();
   } else {
     window.location.href = "index.html";
   }
 }
 
-function loadPokemon() {
+function loadEmployees() {
   axios
-    .get(url + "/pokemon", headers)
+    .get(url + "/employeeRoutes", headers)
     .then(function (res) {
       console.log(res);
-      displayPokemon(res.data.message);
+      displayEmployees(res.data.message);
     })
     .catch(function (err) {
       console.log(err);
     });
 }
 
-function displayPokemon(pokemon) {
+function displayEmployees(employees) {
   var body = document.querySelector("body");
-  for (var i = 0; i < pokemon.length; i++) {
-    body.innerHTML += `<h3>${pokemon[i].pok_name}</h3>`;
+  for (var i = 0; i < employees.length; i++) {
+    body.innerHTML += `<h3>${employees[i].emp_nombre} ${employees[i].emp_apellidos}</h3>`;
   }
 }
