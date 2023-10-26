@@ -4,7 +4,7 @@ const morgan = require("morgan");
 const app = express();
 // Routes
 const employeeRoutes = require("./routes/employeeRoutes.js");
-const user = require("./routes/user.js");
+const admin = require("./routes/admin.js");
 // Middleware
 const auth = require("./middleware/auth");
 const notFound = require("./middleware/notFound");
@@ -18,7 +18,7 @@ app.use(cors);
 
 app.get("/", index);
 
-app.use("/user", user);
+app.use("/admin", admin);
 
 app.use(auth);
 
