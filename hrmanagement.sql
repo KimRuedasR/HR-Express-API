@@ -38,14 +38,7 @@ CREATE TABLE `administradores` (
 LOCK TABLES `administradores` WRITE;
 /*!40000 ALTER TABLE `administradores` DISABLE KEYS */;
 INSERT INTO `administradores` VALUES
-(1,'Admin','admin','1234'),
-(2,'undefined','undefined','undefined'),
-(3,'undefined','undefined','undefined'),
-(4,'undefined','undefined','undefined'),
-(5,'undefined','undefined','undefined'),
-(6,'undefined','undefined','undefined'),
-(7,'admin2','admin2@email.com','1234'),
-(8,'admin2','admin2@email.com','1234');
+(1,'Administrador','admin','admin');
 /*!40000 ALTER TABLE `administradores` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -64,7 +57,7 @@ CREATE TABLE `empleados` (
   `emp_correo` varchar(50) DEFAULT NULL,
   `emp_direccion` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`emp_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -74,17 +67,16 @@ CREATE TABLE `empleados` (
 LOCK TABLES `empleados` WRITE;
 /*!40000 ALTER TABLE `empleados` DISABLE KEYS */;
 INSERT INTO `empleados` VALUES
-(1,'Jon','Snow','123-456-7890','jon.snow@email.com','Castle Black'),
-(2,'Daenerys','Targaryen','123-456-7891','daenerys.targaryen@email.com','Dragonstone'),
-(3,'Tyrion','Lannister','123-456-7892','tyrion.lannister@email.com','Casterly Rock'),
-(4,'Arya','Stark','123-456-7893','arya.stark@email.com','Winterfell'),
-(5,'Sansa','Stark','123-456-7894','sansa.stark@email.com','Winterfell'),
-(6,'Cersei','Lannister','123-456-7895','cersei.lannister@email.com','Casterly Rock'),
-(7,'Jaime','Lannister','123-456-7896','jaime.lannister@email.com','Casterly Rock'),
-(8,'Bran','Stark','123-456-7897','bran.stark@email.com','Winterfell'),
-(9,'Samwell','Tarly','123-456-7898','samwell.tarly@email.com','The Citadel'),
-(10,'Davos','Seaworth','123-456-7899','davos.seaworth@email.com','Dragonstone'),
-(11,'Juan','Perez','0987654321','juan@email.com','Av. Siempreviva');
+(12,'Richard','Hendricks','123-456-7890','richard.hendricks@email.com','Pied Piper HQ'),
+(13,'Erlich','Bachman','123-456-7891','erlich.bachman@email.com','Bachman House'),
+(14,'Dinesh','Chugtai','123-456-7892','dinesh.chugtai@email.com','Pied Piper HQ'),
+(15,'Bertram','Gilfoyle','123-456-7893','bertram.gilfoyle@email.com','Pied Piper HQ'),
+(16,'Jared','Dunn','123-456-7894','jared.dunn@email.com','Pied Piper HQ'),
+(17,'Monica','Hall','123-456-7895','monica.hall@email.com','Raviga Capital'),
+(18,'Gavin','Belson','123-456-7896','gavin.belson@email.com','Hooli HQ'),
+(19,'Nelson','Bighetti','123-456-7897','bighead@email.com','Hooli XYZ'),
+(20,'Laurie','Bream','123-456-7898','laurie.bream@email.com','Raviga Capital'),
+(21,'Russ','Hanneman','123-456-7899','russ.hanneman@email.com','RussFest');
 /*!40000 ALTER TABLE `empleados` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -97,4 +89,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-10-25 23:48:47
+-- Dump completed on 2023-10-29 15:54:38
