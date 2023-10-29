@@ -28,7 +28,7 @@ CREATE TABLE `administradores` (
   `admin_correo` varchar(50) DEFAULT NULL,
   `admin_contrasena` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`admin_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -57,7 +57,7 @@ CREATE TABLE `empleados` (
   `emp_correo` varchar(50) DEFAULT NULL,
   `emp_direccion` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`emp_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,16 +67,16 @@ CREATE TABLE `empleados` (
 LOCK TABLES `empleados` WRITE;
 /*!40000 ALTER TABLE `empleados` DISABLE KEYS */;
 INSERT INTO `empleados` VALUES
-(12,'Richard','Hendricks','123-456-7890','richard.hendricks@email.com','Pied Piper HQ'),
-(13,'Erlich','Bachman','123-456-7891','erlich.bachman@email.com','Bachman House'),
-(14,'Dinesh','Chugtai','123-456-7892','dinesh.chugtai@email.com','Pied Piper HQ'),
-(15,'Bertram','Gilfoyle','123-456-7893','bertram.gilfoyle@email.com','Pied Piper HQ'),
-(16,'Jared','Dunn','123-456-7894','jared.dunn@email.com','Pied Piper HQ'),
-(17,'Monica','Hall','123-456-7895','monica.hall@email.com','Raviga Capital'),
-(18,'Gavin','Belson','123-456-7896','gavin.belson@email.com','Hooli HQ'),
-(19,'Nelson','Bighetti','123-456-7897','bighead@email.com','Hooli XYZ'),
-(20,'Laurie','Bream','123-456-7898','laurie.bream@email.com','Raviga Capital'),
-(21,'Russ','Hanneman','123-456-7899','russ.hanneman@email.com','RussFest');
+(1,'Richard','Hendricks','123-456-7890','richard.hendricks@email.com','Pied Piper HQ'),
+(2,'Erlich','Bachman','123-456-7891','erlich.bachman@email.com','Bachman House'),
+(3,'Dinesh','Chugtai','123-456-7892','dinesh.chugtai@email.com','Pied Piper HQ'),
+(4,'Bertram','Gilfoyle','123-456-7893','bertram.gilfoyle@email.com','Pied Piper HQ'),
+(5,'Jared','Dunn','123-456-7894','jared.dunn@email.com','Pied Piper HQ'),
+(6,'Monica','Hall','123-456-7895','monica.hall@email.com','Raviga Capital'),
+(7,'Gavin','Belson','123-456-7896','gavin.belson@email.com','Hooli HQ'),
+(8,'Nelson','Bighetti','123-456-7897','bighead@email.com','Hooli XYZ'),
+(9,'Laurie','Bream','123-456-7898','laurie.bream@email.com','Raviga Capital'),
+(10,'Russ','Hanneman','123-456-7899','russ.hanneman@email.com','RussFest');
 /*!40000 ALTER TABLE `empleados` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -89,4 +89,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-10-29 15:54:38
+-- Dump completed on 2023-10-29 16:17:36
