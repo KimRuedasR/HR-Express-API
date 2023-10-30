@@ -2,7 +2,7 @@
 --------------------------------------------------------------
 |                                                            |
 |               Taller de Node.js S.A. de C.V.               |
-|                           v1.1.2                           |
+|                           v1.2.1                           |
 |                                                            |
 |                  HHHH H   HHHH HH   RRRRRRR R              |
 |                  HHHH H   HHHH HH   RRRRRRR RR             |
@@ -58,7 +58,7 @@ Una API REST de gestión de recursos humanos que utiliza node.js y express.js. G
    SQl Query:
 
    ```bash
-   GRANT ALL PRIVILEGES ON hrmanagement.\* TO 'hrmanagement'@'localhost';
+   GRANT ALL PRIVILEGES ON hrmanagement.* TO 'hrmanagement'@'localhost';
    ```
 
    - Flush:
@@ -91,6 +91,8 @@ Una API REST de gestión de recursos humanos que utiliza node.js y express.js. G
 
 - /signin: New admin.
 - /login: Admin login.
+- /login:id: Update Admin (PUT).
+- /login:id: Update Admin (PATCH).
 - /: All admins.
 
 ### Employee Routes
@@ -99,4 +101,5 @@ Una API REST de gestión de recursos humanos que utiliza node.js y express.js. G
 - /employees/:id: Employee by ID.
 - /employees: Create new employee (POST).
 - /employees/:id: Update employee (PUT).
+- /employees/:id: Update employee (PATCH).
 - /employees/:id: Delete employee (DELETE).

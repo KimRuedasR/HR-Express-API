@@ -4,7 +4,6 @@ const admin = express.Router();
 const db = require("../config/database");
 
 admin.post("/signin", async (req, res, next) => {
-  console.log(req.body);
   const { admin_nombre, admin_correo, admin_contrasena } = req.body;
   let query =
     "INSERT INTO administradores (admin_nombre, admin_correo, admin_contrasena) ";

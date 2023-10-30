@@ -2,12 +2,11 @@ window.onload = init;
 
 function init() {
   if (!localStorage.getItem("token")) {
-    document
-      .querySelector(".btn-secondary")
-      .addEventListener("click", function () {
-        window.location.href = "signin.html";
-      });
-
+    // document
+    //   .querySelector(".btn-secondary")
+    //   .addEventListener("click", function () {
+    //     window.location.href = "signin.html";
+    //   });
     document.querySelector(".btn-primary").addEventListener("click", login);
   } else {
     window.location.href = "empleados.html";

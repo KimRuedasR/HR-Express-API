@@ -1,6 +1,6 @@
 const mysql = require("mysql");
 const util = require("util");
-
+// Test database configuration, check README.md for more details
 const pool = mysql.createPool({
   connectionLimit: 10,
   host: "localhost",
