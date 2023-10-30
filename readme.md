@@ -82,31 +82,31 @@ npm start
 
 ### 6️⃣ Test
 
-- 📥 Import `./hrManagement.postman_collection.json` with Postman to test the CRUD operations for "Administradores" and "Empleados" entities.
-- ➕ POST operations and database autoincrement, create a new entity or modify routes for testing.
+- Import `./hrManagement.postman_collection.json` with Postman to test the CRUD operations for "Administradores" and "Empleados" entities.
+- POST operations and database autoincrement, create a new entity or modify routes for testing.
 
 ## 🔐 Default Credentials
 
 **Admin User**:
 
-- 📧 **Correo electrónico**: `admin`
-- 🔒 **Contraseña**: `admin`
+- **Correo electrónico**: `admin`
+- **Contraseña**: `admin`
 
 ## 🛣 Endpoints
 
-### 🚹 Admin Routes
+### Admin Routes
 
-- ➕ `/signin`: New admin.
-- 🔐 `/login`: Admin login.
+- 🔐 `/login`: Admin login
+- ➕ `/signin`: New admin..
 - 🔄 `/login/:id`: Update Admin (PUT).
 - 📝 `/login/:id`: Update Admin (PATCH).
 - 📋 `/`: All admins.
 
-### 👥 Employee Routes
+### Employee Routes
 
+- ➕ `/employees`: Create new employee (POST).
 - 📋 `/employees`: All employees.
 - 🔍 `/employees/:id`: Employee by ID.
-- ➕ `/employees`: Create new employee (POST).
 - 🔄 `/employees/:id`: Update employee (PUT).
 - 📝 `/employees/:id`: Update employee (PATCH).
 - ❌ `/employees/:id`: Delete employee (DELETE).
