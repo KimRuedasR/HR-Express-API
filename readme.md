@@ -96,17 +96,18 @@ npm start
 
 ### Admin Routes
 
-- 🔐 `/login`: Admin login
-- ➕ `/signin`: New admin..
-- 🔄 `/login/:id`: Update Admin (PUT).
-- 📝 `/login/:id`: Update Admin (PATCH).
-- 📋 `/`: All admins.
+- 🔐 (POST)`/admins/login`: Admin login
+- ➕ (POST)`/admins/signin`: New admin.
+- 📋 (GET)`/admins/`: All admins.
+- 🔄 (PUT)`/admins/:id:`: Update Admin.
+- 📝 (PATCH)`/admins/:id:`: Update Admin.
+- ❌ (DELETE)`/admins/:id:`: Delete Admin.
 
 ### Employee Routes
 
-- ➕ `/employees`: Create new employee (POST).
-- 📋 `/employees`: All employees.
-- 🔍 `/employees/:id`: Employee by ID.
-- 🔄 `/employees/:id`: Update employee (PUT).
-- 📝 `/employees/:id`: Update employee (PATCH).
-- ❌ `/employees/:id`: Delete employee (DELETE).
+- ➕ (POST)`/employees`: Create new employee.
+- 📋 (GET)`/employees`: All employees.
+- 🔍 (GET)`/employees/:id:`: Employee by ID.
+- 🔄 (PUT)`/employees/:id:`: Update employee.
+- 📝 (PATCH)`/employees/:id:`: Update employee.
+- ❌ (DELETE)`/employees/:id:`: Delete employee.
