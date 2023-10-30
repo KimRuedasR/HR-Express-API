@@ -91,8 +91,8 @@ Una API REST de gestión de recursos humanos que utiliza node.js y express.js. G
 
 - /signin: New admin.
 - /login: Admin login.
-- /login:id: Update Admin (PUT).
-- /login:id: Update Admin (PATCH).
+- /login/:id: Update Admin (PUT).
+- /login/:id: Update Admin (PATCH).
 - /: All admins.
 
 ### Employee Routes
