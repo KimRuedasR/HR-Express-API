@@ -28,7 +28,7 @@ Una API REST de gestión de recursos humanos que utiliza node.js y express.js. G
 
 ## Requirements (Requisitos)
 
-- Node.jss
+- Node.js
 - MySQL
 
 ## Setup (Configuración)
