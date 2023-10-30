@@ -35,15 +35,15 @@
 
 ### 1️⃣ Clone Repo
 
-\`\`\`bash
+```bash
 git clone https://github.com/KimRuedasR/HR-Express-API.git
-\`\`\`
+```
 
 ### 2️⃣ Install Dependencies
 
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+```
 
 ### 3️⃣ MySQL Setup
 
@@ -51,23 +51,23 @@ Use the included test database.
 
 - **New User**: Create a new user "hrmanagement".
 
-  \`\`\`sql
+  ```sql
   CREATE USER 'hrmanagement'@'localhost';
-  \`\`\`
+  ```
 
 - **Import Database**: Import `./hrmanagement.sql` for a test database.
 
 - **Grant Privileges**:
 
-  \`\`\`sql
+  ```sql
   GRANT ALL PRIVILEGES ON hrmanagement.\* TO 'hrmanagement'@'localhost';
-  \`\`\`
+  ```
 
 - **Flush Privileges**:
 
-  \`\`\`sql
+  ```sql
   FLUSH PRIVILEGES;
-  \`\`\`
+  ```
 
 ### 4️⃣ DB Config
 
@@ -76,9 +76,9 @@ Use the included test database.
 
 ### 5️⃣ Start the Server
 
-\`\`\`bash
+```bash
 npm start
-\`\`\`
+```
 
 ### 6️⃣ Test
 
