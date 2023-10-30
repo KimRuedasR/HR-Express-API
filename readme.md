@@ -81,9 +81,9 @@ Una API REST de gestión de recursos humanos que utiliza node.js y express.js. G
 
 6. **Test**:
 
-   -Import ./hrManagement.postman_collection.json with Postman to test the CRUD operations for "Administradores" and "Empleados" entities.
+   - Import ./hrManagement.postman_collection.json with Postman to test the CRUD operations for "Administradores" and "Empleados" entities.
 
-   -POST operations and database autoincrement, create a new entity or modify routes for testing.
+   - POST operations and database autoincrement, create a new entity or modify routes for testing.
 
 ## Endpoints
 
