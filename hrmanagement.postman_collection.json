@@ -1,271 +1,418 @@
 {
 	"info": {
-	  "_postman_id": "64a28f7a-edc1-4bb9-a3f7-754fc1460215",
-	  "name": "HR-Express-API",
-	  "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-	  "_exporter_id": "27356596"
+		"_postman_id": "2876287c-60ee-454e-b1ba-8f5d0a0e5932",
+		"name": "HR-Express-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27356596"
 	},
 	"item": [
-	  {
-		"name": "Create Employee",
-		"request": {
-		  "method": "POST",
-		  "header": [
-			{
-			  "key": "Authorization",
-			  "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6MSwiYWRtaW5fY29ycmVvIjoiYWRtaW4iLCJpYXQiOjE2OTgyODM0MDZ9.oLsmDoVHXMB7S0lR4fFhzD8s_ra1XJuKixp_GOjXSLA",
-			  "type": "text"
+		{
+			"name": "Create Employee",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6MSwiYWRtaW5fY29ycmVvIjoiYWRtaW4iLCJpYXQiOjE2OTgyODM0MDZ9.oLsmDoVHXMB7S0lR4fFhzD8s_ra1XJuKixp_GOjXSLA",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"emp_nombre\": \"Juan\",\n  \"emp_apellidos\": \"Perez\",\n  \"emp_telefono\": \"1234567890\",\n  \"emp_correo\": \"juan@email.com\",\n  \"emp_direccion\": \"Av. Siempreviva\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/employees",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"employees"
+					]
+				}
 			},
-			{
-			  "key": "Content-Type",
-			  "value": "application/json",
-			  "type": "text"
-			}
-		  ],
-		  "body": {
-			"mode": "raw",
-			"raw": "{\n  \"emp_nombre\": \"Juan\",\n  \"emp_apellidos\": \"Perez\",\n  \"emp_telefono\": \"1234567890\",\n  \"emp_correo\": \"juan@email.com\",\n  \"emp_direccion\": \"Av. Siempreviva\"\n}",
-			"options": {
-			  "raw": {
-				"language": "json"
-			  }
-			}
-		  },
-		  "url": {
-			"raw": "localhost:3000/employees",
-			"host": [
-			  "localhost"
-			],
-			"port": "3000",
-			"path": [
-			  "employees"
-			]
-		  }
+			"response": []
 		},
-		"response": []
-	  },
-	  {
-		"name": "Get All Employees",
-		"protocolProfileBehavior": {
-		  "disableBodyPruning": true
-		},
-		"request": {
-		  "method": "GET",
-		  "header": [
-			{
-			  "key": "Authorization",
-			  "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6MSwiYWRtaW5fY29ycmVvIjoiYWRtaW4iLCJpYXQiOjE2OTgyODM0MDZ9.oLsmDoVHXMB7S0lR4fFhzD8s_ra1XJuKixp_GOjXSLA",
-			  "type": "text"
-			}
-		  ],
-		  "body": {
-			"mode": "raw",
-			"raw": ""
-		  },
-		  "url": {
-			"raw": "localhost:3000/employees",
-			"host": [
-			  "localhost"
-			],
-			"port": "3000",
-			"path": [
-			  "employees"
-			]
-		  }
-		},
-		"response": []
-	  },
-	  {
-		"name": "Get Employee by ID",
-		"request": {
-		  "method": "GET",
-		  "header": [
-			{
-			  "key": "Authorization",
-			  "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6MSwiYWRtaW5fY29ycmVvIjoiYWRtaW4iLCJpYXQiOjE2OTgyODM0MDZ9.oLsmDoVHXMB7S0lR4fFhzD8s_ra1XJuKixp_GOjXSLA",
-			  "type": "text"
-			}
-		  ],
-		  "url": {
-			"raw": "localhost:3000/employees/1",
-			"host": [
-			  "localhost"
-			],
-			"port": "3000",
-			"path": [
-			  "employees",
-			  "1"
-			]
-		  }
-		},
-		"response": []
-	  },
-	  {
-		"name": "Update Employee",
-		"request": {
-		  "method": "PUT",
-		  "header": [
-			{
-			  "key": "Authorization",
-			  "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6MSwiYWRtaW5fY29ycmVvIjoiYWRtaW4iLCJpYXQiOjE2OTgyODM0MDZ9.oLsmDoVHXMB7S0lR4fFhzD8s_ra1XJuKixp_GOjXSLA",
-			  "type": "text"
+		{
+			"name": "Get All Employees",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
 			},
-			{
-			  "key": "Content-Type",
-			  "value": "application/json",
-			  "type": "text"
-			}
-		  ],
-		  "body": {
-			"mode": "raw",
-			"raw": "{\n  \"emp_nombre\": \"Juan\",\n  \"emp_apellidos\": \"Perez\",\n  \"emp_telefono\": \"0987654321\",\n  \"emp_correo\": \"juan@email.com\",\n  \"emp_direccion\": \"Av. Siempreviva\"\n}",
-			"options": {
-			  "raw": {
-				"language": "json"
-			  }
-			}
-		  },
-		  "url": {
-			"raw": "localhost:3000/employees/1",
-			"host": [
-			  "localhost"
-			],
-			"port": "3000",
-			"path": [
-			  "employees",
-			  "1"
-			]
-		  }
-		},
-		"response": []
-	  },
-	  {
-		"name": "Delete Employee",
-		"request": {
-		  "method": "DELETE",
-		  "header": [
-			{
-			  "key": "Authorization",
-			  "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6MSwiYWRtaW5fY29ycmVvIjoiYWRtaW4iLCJpYXQiOjE2OTgyODM0MDZ9.oLsmDoVHXMB7S0lR4fFhzD8s_ra1XJuKixp_GOjXSLA",
-			  "type": "text"
-			}
-		  ],
-		  "url": {
-			"raw": "localhost:3000/employees/1",
-			"host": [
-			  "localhost"
-			],
-			"port": "3000",
-			"path": [
-			  "employees",
-			  "1"
-			]
-		  }
-		},
-		"response": []
-	  },
-	  {
-		"name": "Create Administrator",
-		"request": {
-		  "method": "POST",
-		  "header": [
-			{
-			  "key": "Authorization",
-			  "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6MSwiYWRtaW5fY29ycmVvIjoiYWRtaW4iLCJpYXQiOjE2OTgyODM0MDZ9.oLsmDoVHXMB7S0lR4fFhzD8s_ra1XJuKixp_GOjXSLA",
-			  "type": "text"
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6MSwiYWRtaW5fY29ycmVvIjoiYWRtaW4iLCJpYXQiOjE2OTgyODM0MDZ9.oLsmDoVHXMB7S0lR4fFhzD8s_ra1XJuKixp_GOjXSLA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/employees",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"employees"
+					]
+				}
 			},
-			{
-			  "key": "Content-Type",
-			  "value": "application/json",
-			  "type": "text"
-			}
-		  ],
-		  "body": {
-			"mode": "raw",
-			"raw": "{\n  \"admin_nombre\": \"admin2\",\n  \"admin_correo\": \"admin2@email.com\",\n  \"admin_contrasena\": \"1234\"\n}",
-			"options": {
-			  "raw": {
-				"language": "json"
-			  }
-			}
-		  },
-		  "url": {
-			"raw": "localhost:3000/admins/signin",
-			"host": [
-			  "localhost"
-			],
-			"port": "3000",
-			"path": [
-			  "admins",
-			  "signin"
-			]
-		  }
+			"response": []
 		},
-		"response": []
-	  },
-	  {
-		"name": "Administrator Login",
-		"request": {
-		  "method": "POST",
-		  "header": [
-			{
-			  "key": "Authorization",
-			  "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6MSwiYWRtaW5fY29ycmVvIjoiYWRtaW4iLCJpYXQiOjE2OTgyODM0MDZ9.oLsmDoVHXMB7S0lR4fFhzD8s_ra1XJuKixp_GOjXSLA",
-			  "type": "text"
+		{
+			"name": "Get Employee by ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6MSwiYWRtaW5fY29ycmVvIjoiYWRtaW4iLCJpYXQiOjE2OTgyODM0MDZ9.oLsmDoVHXMB7S0lR4fFhzD8s_ra1XJuKixp_GOjXSLA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/employees/11",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"employees",
+						"11"
+					]
+				}
 			},
-			{
-			  "key": "Content-Type",
-			  "value": "application/json",
-			  "type": "text"
-			}
-		  ],
-		  "body": {
-			"mode": "raw",
-			"raw": "{\n  \"admin_correo\": \"admin\",\n  \"admin_contrasena\": \"1234\"\n}",
-			"options": {
-			  "raw": {
-				"language": "json"
-			  }
-			}
-		  },
-		  "url": {
-			"raw": "localhost:3000/admins/login",
-			"host": [
-			  "localhost"
-			],
-			"port": "3000",
-			"path": [
-			  "admins",
-			  "login"
-			]
-		  }
+			"response": []
 		},
-		"response": []
-	  },
-	  {
-		"name": "Get All Administrators",
-		"request": {
-		  "method": "GET",
-		  "header": [
-			{
-			  "key": "Authorization",
-			  "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6MSwiYWRtaW5fY29ycmVvIjoiYWRtaW4iLCJpYXQiOjE2OTgyODM0MDZ9.oLsmDoVHXMB7S0lR4fFhzD8s_ra1XJuKixp_GOjXSLA",
-			  "type": "text"
-			}
-		  ],
-		  "url": {
-			"raw": "localhost:3000/admins",
-			"host": [
-			  "localhost"
-			],
-			"port": "3000",
-			"path": [
-			  "admins"
-			]
-		  }
+		{
+			"name": "Update Employee (PUT)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6MSwiYWRtaW5fY29ycmVvIjoiYWRtaW4iLCJpYXQiOjE2OTgyODM0MDZ9.oLsmDoVHXMB7S0lR4fFhzD8s_ra1XJuKixp_GOjXSLA",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"emp_nombre\": \"Pedro\",\n  \"emp_apellidos\": \"Rodriguez\",\n  \"emp_telefono\": \"0987654321\",\n  \"emp_correo\": \"pedrito@email.com\",\n  \"emp_direccion\": \"Av. Siempreviva 2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/employees/11",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"employees",
+						"11"
+					]
+				}
+			},
+			"response": []
 		},
-		"response": []
-	  }
+		{
+			"name": "Update Employee (PATCH)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6MSwiYWRtaW5fY29ycmVvIjoiYWRtaW4iLCJpYXQiOjE2OTgyODM0MDZ9.oLsmDoVHXMB7S0lR4fFhzD8s_ra1XJuKixp_GOjXSLA",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"emp_nombre\": \"Pedro\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/employees/11",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"employees",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6MSwiYWRtaW5fY29ycmVvIjoiYWRtaW4iLCJpYXQiOjE2OTgyODM0MDZ9.oLsmDoVHXMB7S0lR4fFhzD8s_ra1XJuKixp_GOjXSLA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/employees/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"employees",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Administrator Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6MSwiYWRtaW5fY29ycmVvIjoiYWRtaW4iLCJpYXQiOjE2OTgyODM0MDZ9.oLsmDoVHXMB7S0lR4fFhzD8s_ra1XJuKixp_GOjXSLA",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"admin_correo\": \"admin\",\n  \"admin_contrasena\": \"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/admins/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admins",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Administrator",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6MSwiYWRtaW5fY29ycmVvIjoiYWRtaW4iLCJpYXQiOjE2OTgyODM0MDZ9.oLsmDoVHXMB7S0lR4fFhzD8s_ra1XJuKixp_GOjXSLA",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"admin_nombre\": \"admin1\",\n  \"admin_correo\": \"admin1@email.com\",\n  \"admin_contrasena\": \"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/admins/signin",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admins",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Aministrator (PUT)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6MSwiYWRtaW5fY29ycmVvIjoiYWRtaW4iLCJpYXQiOjE2OTgyODM0MDZ9.oLsmDoVHXMB7S0lR4fFhzD8s_ra1XJuKixp_GOjXSLA",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"admin_nombre\": \"admin2\",\n  \"admin_correo\": \"admin2@email.com\",\n  \"admin_contrasena\": \"4321\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/admins/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admins",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Aministrator (PATCH)",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6MSwiYWRtaW5fY29ycmVvIjoiYWRtaW4iLCJpYXQiOjE2OTgyODM0MDZ9.oLsmDoVHXMB7S0lR4fFhzD8s_ra1XJuKixp_GOjXSLA",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"admin_nombre\": \"admin2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/admins/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admins",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Administrators",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6MSwiYWRtaW5fY29ycmVvIjoiYWRtaW4iLCJpYXQiOjE2OTgyODM0MDZ9.oLsmDoVHXMB7S0lR4fFhzD8s_ra1XJuKixp_GOjXSLA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/admins",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Administrator",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbl9pZCI6MSwiYWRtaW5fY29ycmVvIjoiYWRtaW4iLCJpYXQiOjE2OTgyODM0MDZ9.oLsmDoVHXMB7S0lR4fFhzD8s_ra1XJuKixp_GOjXSLA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/admins/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admins",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
 	]
-  }
-  
+}
