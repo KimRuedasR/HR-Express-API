@@ -2,7 +2,7 @@
 --------------------------------------------------------------
 |                                                            |
 |               Taller de Node.js S.A. de C.V.               |
-|                           v1.2.1                           |
+|                           v1.2.2                          |
 |                                                            |
 |                  HHHH H   HHHH HH   RRRRRRR R              |
 |                  HHHH H   HHHH HH   RRRRRRR RR             |
@@ -18,88 +18,95 @@
 --------------------------------------------------------------
 ```
 
-# HR Management API (API de RH)
+# 🌐 HR Management API (API de RH) 🌐
 
-## Description (Descripción)
+## 📝 Description (Descripción)
 
-An HR management REST API using node.js and express.js. Manages administrators and employees.
+🇬🇧 An HR management REST API using node.js and express.js. Manages administrators and employees.
 
-Una API REST de gestión de recursos humanos que utiliza node.js y express.js. Gestiona administradores y empleados.
+🇪🇸 Una API REST de gestión de recursos humanos que utiliza node.js y express.js. Gestiona administradores y empleados.
 
-## Requirements (Requisitos)
+## 🛠 Requirements (Requisitos)
 
-- Node.js
-- MySQL
+- 🟢 Node.js
+- 🛢 MySQL
 
-## Setup (Configuración)
+## 🚀 Setup (Configuración)
 
-1. **Clone Repo**:
-   git clone https://github.com/KimRuedasR/HR-Express-API.git
-2. **Install**:
-   npm install
-3. **MySQL Setup**:
-   Use the included test database.
+### 1️⃣ Clone Repo
 
-   - New User:
-     Create a new user "hrmanagement".
+```bash
+git clone https://github.com/KimRuedasR/HR-Express-API.git
+```
 
-   SQl Query:
+### 2️⃣ Install Dependencies
 
-   ```bash
-   CREATE USER 'hrmanagement'@'localhost';
-   ```
+```bash
+npm install
+```
 
-   - Import Database
-     Import "./hrmanagement.sql" for a test database
+### 3️⃣ MySQL Setup
 
-   - Grant:
-     Grant all privileges to the "hrmanagement" user and the "hrmanagement.sql" datadase.
+Use the included test database.
 
-   SQl Query:
+- **New User**: Create a new user "hrmanagement".
 
-   ```bash
-   GRANT ALL PRIVILEGES ON hrmanagement.* TO 'hrmanagement'@'localhost';
-   ```
+  ```sql
+  CREATE USER 'hrmanagement'@'localhost';
+  ```
 
-   - Flush:
-     Flush privileges.
+- **Import Database**: Import `./hrmanagement.sql` for a test database.
 
-   SQl Query:
+- **Grant Privileges**:
 
-   ```bash
-   FLUSH PRIVILEGES;
-   ```
+  ```sql
+  GRANT ALL PRIVILEGES ON hrmanagement.\* TO 'hrmanagement'@'localhost';
+  ```
 
-4. **DB Config**:
+- **Flush Privileges**:
 
-   - By default configured for "hrmanagement.sql" test database.
+  ```sql
+  FLUSH PRIVILEGES;
+  ```
 
-   - Update ./config/database.js.
+### 4️⃣ DB Config
 
-5. **Start**:
-   npm start
+- By default configured for `hrmanagement.sql` test database.
+- Update `./config/database.js`.
 
-6. **Test**:
+### 5️⃣ Start the Server
 
-   - Import ./hrManagement.postman_collection.json with Postman to test the CRUD operations for "Administradores" and "Empleados" entities.
+```bash
+npm start
+```
 
-   - POST operations and database autoincrement, create a new entity or modify routes for testing.
+### 6️⃣ Test
 
-## Endpoints
+- Import `./hrManagement.postman_collection.json` with Postman to test the CRUD operations for "Administradores" and "Empleados" entities.
+- POST operations and database autoincrement, create a new entity or modify routes for testing.
+
+## 🔐 Default Credentials
+
+**Admin User**:
+
+- **Correo electrónico**: `admin`
+- **Contraseña**: `admin`
+
+## 🛣 Endpoints
 
 ### Admin Routes
 
-- /signin: New admin.
-- /login: Admin login.
-- /login/:id: Update Admin (PUT).
-- /login/:id: Update Admin (PATCH).
-- /: All admins.
+- 🔐 `/login`: Admin login
+- ➕ `/signin`: New admin..
+- 🔄 `/login/:id`: Update Admin (PUT).
+- 📝 `/login/:id`: Update Admin (PATCH).
+- 📋 `/`: All admins.
 
 ### Employee Routes
 
-- /employees: All employees.
-- /employees/:id: Employee by ID.
-- /employees: Create new employee (POST).
-- /employees/:id: Update employee (PUT).
-- /employees/:id: Update employee (PATCH).
-- /employees/:id: Delete employee (DELETE).
+- ➕ `/employees`: Create new employee (POST).
+- 📋 `/employees`: All employees.
+- 🔍 `/employees/:id`: Employee by ID.
+- 🔄 `/employees/:id`: Update employee (PUT).
+- 📝 `/employees/:id`: Update employee (PATCH).
+- ❌ `/employees/:id`: Delete employee (DELETE).
