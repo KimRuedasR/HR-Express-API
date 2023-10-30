@@ -38,17 +38,18 @@ Una API REST de gestión de recursos humanos que utiliza node.js y express.js. G
 2. **Install**:
    npm install
 3. **MySQL Setup**:
+   Use the included test database.
 
    - New User:
-     Create new user "hrmanagement".
+     Create a new user "hrmanagement".
 
    SQl Query:
 
    ```bash
-   CREATE USER 'hrmanagement'@'localhost' IDENTIFIED BY 'hrmanagement';
+   CREATE USER 'hrmanagement'@'localhost';
    ```
 
-   - Test database
+   - Import Database
      Import "./hrmanagement.sql" for a test database
 
    - Grant:
@@ -79,7 +80,10 @@ Una API REST de gestión de recursos humanos que utiliza node.js y express.js. G
    npm start
 
 6. **Test**:
-   Import ./Postman_hrManagement.postman_collection.json with Postman to test the CRUD operations for "Administradores" and "Empleados" entities.
+
+   -Import ./hrManagement.postman_collection.json with Postman to test the CRUD operations for "Administradores" and "Empleados" entities.
+
+   -POST operations and database autoincrement, create a new entity or modify routes for testing.
 
 ## Endpoints
 
