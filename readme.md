@@ -2,7 +2,7 @@
 --------------------------------------------------------------
 |                                                            |
 |               Taller de Node.js S.A. de C.V.               |
-|                           v1.2.2                          |
+|                           v1.2.3                           |
 |                                                            |
 |                  HHHH H   HHHH HH   RRRRRRR R              |
 |                  HHHH H   HHHH HH   RRRRRRR RR             |
@@ -111,3 +111,8 @@ npm start
 - 🔄 (PUT)`/employees/:id:`: Update employee.
 - 📝 (PATCH)`/employees/:id:`: Update employee.
 - ❌ (DELETE)`/employees/:id:`: Delete employee.
+
+### Testing and new features
+
+- 🐋🚢 Docker container.
+- 🖥️🎨 Interface redesign.
