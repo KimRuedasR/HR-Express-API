@@ -15,25 +15,21 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors);
-
-// Serve static files from 'interface' directory
-app.use(express.static(path.join(__dirname, "interface")));
+app.use(express.static(path.join(__dirname, "interface"))); // Serve static files
 
 // Public routes
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "interface", "login.html"));
 });
+
 app.use("/admins", adminRoutes);
 
-// Apply authentication middleware here
 app.use(auth);
 
-// Protected routes
-app.use("/employees", employeeRoutes);
+// Apply authentication middleware only to protected routes
+app.use("/employees", auth, employeeRoutes);
 
 // Not found middleware
-app.use(notFound);
-
 app.use(notFound);
 
 app.listen(process.env.PORT || 3000, () => {
