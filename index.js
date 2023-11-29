@@ -17,14 +17,15 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors);
 app.use(express.static(path.join(__dirname, "interface"))); // Serve static files
 
+// Serve static files
+app.use(express.static(path.join(__dirname, "interface")));
+
 // Public routes
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "interface", "login.html"));
 });
 
 app.use("/admins", adminRoutes);
-
-app.use(auth);
 
 // Apply authentication middleware only to protected routes
 app.use("/employees", auth, employeeRoutes);
