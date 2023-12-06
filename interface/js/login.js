@@ -19,7 +19,7 @@ function login() {
 
   axios({
     method: "post",
-    url: "http://localhost:3000/admins/login",
+    url: "https://hr-management-express-api.azurewebsites.net/admins/login",
     data: {
       admin_correo: mail,
       admin_contrasena: pass,

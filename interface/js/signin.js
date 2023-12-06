@@ -21,7 +21,7 @@ function signin() {
 
   axios({
     method: "post",
-    url: "http://localhost:3000/admin/signin",
+    url: "https://hr-management-express-api.azurewebsites.net/admin/signin",
     data: {
       admin_nombre: name,
       admin_correo: mail,
