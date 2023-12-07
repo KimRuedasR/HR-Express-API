@@ -3,7 +3,7 @@ const util = require("util");
 const fs = require("fs");
 
 // SSL certificate
-const caCert = fs.readFileSync("./DigiCertGlobalRootCA.crt.pem", "utf8");
+const caCert = fs.readFileSync("./certs/DigiCertGlobalRootCA.crt.pem", "utf8");
 
 // Test database configuration, check README.md for more details
 const pool = mysql.createPool({

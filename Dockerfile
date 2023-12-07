@@ -10,5 +10,8 @@ RUN npm install
 # Bundle app source
 COPY . .
 
+# Copy SSL certificate
+COPY ./certs /usr/src/app/certs
+
 EXPOSE 3000
 CMD [ "node", "index.js" ]

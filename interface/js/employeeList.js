@@ -1,6 +1,6 @@
 window.onload = init;
 var headers = {};
-var url = "http://localhost:3000";
+var url = "https://hr-management-express-api.azurewebsites.net";
 
 function init() {
   console.log("Token is:", localStorage.getItem("token"));

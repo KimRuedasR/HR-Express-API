@@ -31,7 +31,7 @@ function addEmployees() {
 
   axios
     .post(
-      "http://localhost:3000/employees/",
+      "https://hr-management-express-api.azurewebsites.net/employees/",
       {
         emp_nombre: name,
         emp_apellidos: apellidos,
