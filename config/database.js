@@ -1,5 +1,10 @@
 const mysql = require("mysql");
 const util = require("util");
+const fs = require("fs");
+
+// SSL certificate
+const caCert = fs.readFileSync("./DigiCertGlobalRootCA.crt.pem", "utf8");
+
 // Test database configuration, check README.md for more details
 const pool = mysql.createPool({
   connectionLimit: 10,
@@ -7,6 +12,9 @@ const pool = mysql.createPool({
   user: "hrdbadmin",
   password: "Servicioscloud_420",
   database: "hrmanagement",
+  ssl: {
+    ca: caCert,
+  },
 });
 
 pool.query = util.promisify(pool.query);
